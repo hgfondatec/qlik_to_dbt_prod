@@ -4,7 +4,7 @@ with source_data as (
 
     select
         *
-    from {{ ref('stg_orders') }}
+    from {{ ref('stg_bel') }}
 
 )
 

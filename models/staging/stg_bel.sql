@@ -1,0 +1,68 @@
+{{ config(materialized='table') }}
+
+with source_data as (
+
+    select
+    --bel_0_11t as pct_bel_id,
+    --bel_0_11t as pct_bel_id_alt,
+        bel_1_1 as bel_belegstatus_a_n,
+    1 as pct_bel_groupby,
+        bel_2_1 as bel_belegart,
+    --bel_dbk30t as dbk30_id,
+        bel_3_8 as bel_belegnummer,
+        bel_11_8 as adr_adressnummer,
+        bel_11_8 as adr_adressnummer_num,
+    --bel_11_8n as adr_adressnummer_num2,
+        bel_19_10 as bel_belegdatum,
+        bel_29_10 as bel_liefer_termindatum,
+        bel_39_8 as prj_projektnummer,
+        bel_592_8 as bel_lieferschein_nr,
+        bel_210_5 as bel_skonto1,
+        bel_245_1 as bel_steuerberechnungsart,
+        bel_263_12 as bel_nebenkosten1_vk,
+        bel_275_12 as bel_nebenkosten2_vk,
+        bel_287_12 as bel_nebenkosten3_vk,
+        bel_299_12 as bel_nebenkosten4_vk,
+        bel_311_12 as bel_nebenkosten5_vk,
+        bel_393_12 as bel_warenwertnetto,
+        bel_405_12 as bel_warenwertmwst,
+        bel_429_12 as bel_belegnetto,
+        bel_441_12 as bel_belegmwst,
+        bel_453_12 as bel_belegbrutto,
+        bel_516_3 as bel_erfasser,
+        bel_554_2 as bel_versandtarif,
+        bel_747_8 as blfa_nummer,
+        bel_721_1 as bel_archivierungsart_aktl,
+        bel_882_3 as bel_packer,
+        bel_885_3 as bel_packer2,
+        bel_892_2 as gvs_partnernummer,
+        bel_892_2 as bel_gvspartnernummer,
+        bel_907_2 as bel_nl_kz,
+    --bel_1530_1 as bel_freigestellt,
+        bel_2038_1,
+        bel_2040_1 as bel_belegtyp,
+    --case when bel_2040_1 = '1' and bel_2_1 in ('R','G') then true else false end as bel_umsatztyp,
+        bel_2257_60 as bel_kostenstelle,
+        bel_2451_8 as bel_praesident3,
+        bel_2461_8 as bel_praesident2,
+        bel_2469_8 as bel_praesident1,
+        bel_2587_10 as bel_om_id,
+        bel_2723_3 as bel_filiale,
+        bel_2966_10 as bel_gvsbelegnummer,
+        bel_2976_1,
+        bel_2977_2 as bel_2977_2,
+        extract(month from bel_19_10) as bel_sca_monat,
+        '0036' as bel_sca_partner,
+        bel_3861_2 as bel_herkunft,
+        bel_3951_60 as bel_ikommentar,
+        bel_2553_1 as bel_rekla_frei,
+    --bel_2696_3 as bel_rekla_fehlposition,
+        bel_2699_2 as bel_rekla_status,
+        bel_2701_3 as bel_rekla_positionen,
+        bel_2712_11 as bel_rekla_urbeleg
+    from {{ source('raw', 'm36bel') }}
+
+)
+
+select *
+from source_data
