@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_fdw
+    tables:
+      - name: m36bel
