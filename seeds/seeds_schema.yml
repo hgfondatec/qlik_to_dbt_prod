@@ -1,0 +1,4 @@
+version: 2
+
+seeds:
+  - name: beleg_arten
