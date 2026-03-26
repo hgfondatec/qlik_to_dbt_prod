@@ -6,3 +6,4 @@ sources:
     tables:
       - name: m36bel
       - name: m36id0222
+      - name: m36art
