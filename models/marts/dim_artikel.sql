@@ -26,7 +26,9 @@ select
     hauptkategorie.art_hauptkategorie_name,
     hauptkategorie.art_hauptkategorie_bezeichnung,
     nebenkategorie.art_nebenkategorie_name,
-    nebenkategorie.art_nebenkategorie_bezeichnung
+    nebenkategorie.art_nebenkategorie_bezeichnung,
+    base.art_letzte_preisaenderung,
+    base.art_paletteninhalt
 from 
     base 
     left join hauptkategorie 
