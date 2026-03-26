@@ -18,6 +18,7 @@ with source_data as (
         bel_39_8 as prj_projektnummer,
         bel_592_8 as bel_lieferschein_nr,
         bel_210_5 as bel_skonto1,
+        bel_232_8 as bel_vertreter,
         bel_245_1 as bel_steuerberechnungsart,
         bel_263_12 as bel_nebenkosten1_vk,
         bel_275_12 as bel_nebenkosten2_vk,
