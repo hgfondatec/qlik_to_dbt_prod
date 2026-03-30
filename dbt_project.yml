@@ -25,3 +25,6 @@ models:
     marts:
       +materialized: table
       +schema: gold
+    data_quality:
+      +materialized: table
+      +schema: quality

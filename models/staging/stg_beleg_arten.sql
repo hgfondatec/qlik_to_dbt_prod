@@ -3,9 +3,9 @@
 with source_data as (
 
     select
-      "BEL_Belegart" as bel_belegart,
-      "BEL_Belegkreis" as bel_belegkreis, 
-      "BEL_Belegname" as bel_belegname
+      bel_belegart as bel_belegart,
+      bel_belegkreis as bel_belegkreis, 
+      bel_belegname as bel_belegname
     from {{ ref('beleg_arten') }}
 
 )

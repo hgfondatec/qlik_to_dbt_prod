@@ -1,4 +1,4 @@
-﻿BEL_Belegart,BEL_Belegkreis,BEL_Belegname
+﻿bel_belegart,bel_belegkreis,bel_belegname
 A,Kundenbeleg,Auftrag (Kunde)
 b,Lieferantenbeleg,Bestellung (WE)
 E,Allgemeiner Beleg,Lagerabbuchung
