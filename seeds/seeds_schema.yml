@@ -4,3 +4,4 @@ seeds:
   - name: beleg_arten
   - name: vertreter
   - name: hauptkategorie
+  - name: nebenkategorie

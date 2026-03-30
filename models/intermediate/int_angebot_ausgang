@@ -1,0 +1,15 @@
+{{ config(materialized='table') }}
+
+with source_data as (
+
+    select
+      bel_belegnummer,
+      bel_belegdatum,
+      adr_adressnummer
+    from {{ ref('stg_bel') }}
+    where bel_belegart = 'A'
+
+)
+
+select *
+from source_data

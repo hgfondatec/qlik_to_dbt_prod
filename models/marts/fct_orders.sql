@@ -4,6 +4,7 @@ with source_data as (
 
     select
         distinct b.bel_belegnummer,
+        b.bel_vertreter,
         b.bel_belegdatum,
         b.adr_adressnummer,
         b.bel_belegbrutto,
